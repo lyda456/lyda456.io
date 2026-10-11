@@ -1,0 +1,123 @@
+
+
+.main-heading {
+    font-size: 40px;
+    background-color: lightpink;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+img {
+    width: 100%;
+    border: 3px solid lightpink;
+}
+
+body {
+    background-color: lightyellow;
+}
+
+/* First section */
+.content {
+    display: flex;
+    gap: 20px;
+}
+
+.text {
+    width: 50%;
+}
+
+.content img {
+    width: 50%;
+    height: auto;
+}
+
+/* Interesting Facts section */
+.facts-content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 25px;
+    width: 100%;
+}
+
+.facts-images {
+    flex: 0 0 55%;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.facts-images img {
+    width: calc(50% - 5px);
+    height: 250px;
+    object-fit: cover;
+}
+
+.facts-content .right-text {
+    flex: 1;
+    min-width: 0;
+    margin: 0;
+    line-height: 2.5;
+}
+
+/* Make headings larger */
+.main-heading {
+    font-size: 48px;
+}
+
+/* Make paragraph text larger */
+p {
+    font-size: 18px;
+}
+
+/* Make the images larger */
+.facts-images {
+    flex-basis: 55%;
+}
+
+.facts-images img {
+    height: 190px;
+}
+
+.facts-images img {
+    height: 350px;
+}
+
+.content .text p {
+    line-height: 1.7;
+}
+
+h2 {
+    font-style: italic;
+}
+
+.main-heading {
+    padding: 15px;
+    border-radius: 10px;
+    color: #593d46;
+}
+
+section {
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+img {
+    border-radius: 12px;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background-color: lightpink;
+    margin: 30px 25px;
+}
+
+.main-heading,
+h2 {
+    color: #002366;
+}
+
+
