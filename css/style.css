@@ -1,57 +1,156 @@
 
-
-.main-heading {
-    font-size: 40px;
-    background-color: lightpink;
+/* General website styling */
+* {
+    box-sizing: border-box;
 }
 
-h2 {
-    font-size: 20px;
-}
-
-img {
-    width: 100%;
-    border: 3px solid lightpink;
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    background-color: lightyellow;
+    margin: 0;
+    padding: 20px;
+    background-color: #F7F0E5;
+    font-family: Georgia, "Times New Roman", serif;
+    color: #292526;
 }
 
-/* First section */
+/* Navigation menu */
+nav {
+    background-color: #292526;
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #B89A65;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: #76263A;
+}
+
+/* Main headings */
+.main-heading {
+    font-size: 38px;
+    color: #76263A;
+    background-color: #FFFCF7;
+    padding: 18px;
+    border: 1px solid #DCCBBC;
+    border-bottom: 3px solid #76263A;
+    border-radius: 10px;
+}
+
+/* Main page title */
+.page-title {
+    text-align: center;
+    font-size: 46px;
+    color: white;
+    background-color: #76263A;
+    padding: 35px 20px;
+    border: 2px solid #B89A65;
+    border-radius: 10px;
+}
+
+/* Small decorative text above and below the title */
+.page-title::before {
+    content: "THE ART OF DISCIPLINE";
+    display: block;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #E5C99A;
+    margin-bottom: 15px;
+}
+
+.page-title::after {
+    content: "RESPECT  •  PERSEVERANCE  •  SELF-CONTROL";
+    display: block;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 1px;
+    color: #F7F0E5;
+    margin-top: 15px;
+}
+
+/* Other headings */
+h2 {
+    color: #76263A;
+    font-size: 22px;
+}
+
+/* Paragraphs */
+p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #292526;
+    overflow-wrap: break-word;
+}
+
+/* Sections */
+section {
+    padding: 25px;
+    margin: 25px 0;
+    background-color: #FFFCF7;
+    border: 1px solid #DCCBBC;
+    border-radius: 12px;
+}
+
+/* Introduction section */
 .content {
     display: flex;
-    gap: 20px;
+    align-items: flex-start;
+    gap: 25px;
 }
 
 .text {
-    width: 50%;
+    flex: 1;
+    min-width: 0;
 }
 
-.content img {
-    width: 50%;
+.content > img {
+    width: calc(50% - 12px);
     height: auto;
+}
+
+/* Images */
+img {
+    display: block;
+    max-width: 100%;
+    border: 2px solid #B89A65;
+    border-radius: 8px;
 }
 
 /* Interesting Facts section */
 .facts-content {
     display: flex;
-    flex-direction: row;
     align-items: flex-start;
-    gap: 25px;
-    width: 100%;
+    gap: 20px;
 }
 
 .facts-images {
-    flex: 0 0 55%;
+    flex: 0 0 50%;
+    min-width: 0;
     display: flex;
-    flex-direction: row;
     gap: 10px;
 }
 
 .facts-images img {
     width: calc(50% - 5px);
-    height: 250px;
+    height: 280px;
     object-fit: cover;
 }
 
@@ -59,65 +158,278 @@ body {
     flex: 1;
     min-width: 0;
     margin: 0;
-    line-height: 2.5;
+    padding-left: 15px;
+    border-left: 2px solid #B89A65;
 }
 
-/* Make headings larger */
-.main-heading {
-    font-size: 48px;
+/* Five Tenets cards */
+.tenets-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 20px;
 }
 
-/* Make paragraph text larger */
-p {
-    font-size: 18px;
-}
-
-/* Make the images larger */
-.facts-images {
-    flex-basis: 55%;
-}
-
-.facts-images img {
-    height: 190px;
-}
-
-.facts-images img {
-    height: 350px;
-}
-
-.content .text p {
-    line-height: 1.7;
-}
-
-h2 {
-    font-style: italic;
-}
-
-.main-heading {
-    padding: 15px;
+.tenet-card {
+    background-color: #F7F0E5;
+    padding: 20px;
+    border: 1px solid #DCCBBC;
+    border-top: 3px solid #76263A;
     border-radius: 10px;
-    color: #593d46;
 }
 
-section {
-    padding: 25px;
-    margin-bottom: 30px;
+.tenet-card h2 {
+    margin-top: 0;
 }
 
-img {
-    border-radius: 12px;
+.tenet-card p {
+    margin-bottom: 0;
 }
 
+.tenet-card:hover {
+    background-color: #F1E5D7;
+}
+
+/* Belt display */
+.belt-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 22px;
+    margin: 25px 0;
+    padding: 20px;
+    background-color: #F7F0E5;
+    border: 1px solid #DCCBBC;
+    border-radius: 10px;
+}
+
+.belt-item {
+    text-align: center;
+    width: 100px;
+}
+
+.belt-item p {
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.belt {
+    height: 22px;
+    width: 90px;
+    margin: auto;
+    border-radius: 4px;
+    border: 1px solid #CCCCCC;
+}
+
+.belt-white {
+    background-color: white;
+}
+
+.belt-yellow {
+    background-color: #F2D45C;
+}
+
+.belt-green {
+    background-color: #27844A;
+}
+
+.belt-blue {
+    background-color: #2864B8;
+}
+
+.belt-red {
+    background-color: #C73737;
+}
+
+.belt-black {
+    background-color: #292929;
+}
+
+.belt-note {
+    font-size: 14px;
+    font-style: italic;
+    color: #786D68;
+}
+
+/* More information */
+#more-information h2 {
+    border-bottom: 1px solid #DCCBBC;
+    padding-bottom: 8px;
+}
+
+/* Divider lines */
 hr {
     border: none;
-    height: 2px;
-    background-color: lightpink;
-    margin: 30px 25px;
+    height: 1px;
+    background-color: #B89A65;
+    margin: 28px 0;
 }
 
-.main-heading,
-h2 {
-    color: #002366;
+/* Footer */
+footer {
+    background-color: #292526;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #B89A65;
+    border-radius: 10px;
 }
 
+footer p {
+    color: white;
+    margin: 5px;
+    font-size: 15px;
+}
 
+/* Tablet layout */
+@media (min-width: 601px) and (max-width: 900px) {
+    body {
+        padding: 14px;
+    }
+
+    .main-heading {
+        font-size: 32px;
+    }
+
+    .page-title {
+        font-size: 40px;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .content,
+    .facts-content {
+        gap: 15px;
+    }
+
+    .facts-images {
+        flex-basis: 48%;
+    }
+
+    .facts-images img {
+        height: 230px;
+    }
+}
+
+/* Phone layout */
+@media (max-width: 600px) {
+    body {
+        padding: 8px;
+    }
+
+    .main-heading {
+        font-size: 27px;
+        padding: 13px;
+    }
+
+    .page-title {
+        font-size: 30px;
+        padding: 25px 12px;
+    }
+
+    .page-title::before {
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+
+    .page-title::after {
+        font-size: 9px;
+        line-height: 1.8;
+    }
+
+    h2 {
+        font-size: 19px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    section {
+        padding: 15px;
+        margin: 15px 0;
+    }
+
+    /* Stack introduction content */
+    .content {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .text {
+        width: 100%;
+    }
+
+    .content > img {
+        width: 100%;
+    }
+
+    /* Stack Interesting Facts content */
+    .facts-content {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .facts-images {
+        width: 100%;
+        flex: none;
+    }
+
+    .facts-images img {
+        width: calc(50% - 5px);
+        height: 180px;
+    }
+
+    .facts-content .right-text {
+        width: 100%;
+    }
+
+    /* Navigation */
+    nav {
+        gap: 4px;
+        padding: 8px;
+    }
+
+    nav a {
+        font-size: 12px;
+        padding: 8px 6px;
+    }
+
+    /* Tenets cards */
+    .tenets-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .tenet-card {
+        padding: 15px;
+    }
+
+    /* Belts */
+    .belt-container {
+        gap: 15px;
+        padding: 15px 5px;
+    }
+
+    .belt-item {
+        width: 80px;
+    }
+
+    .belt {
+        width: 72px;
+    }
+
+    hr {
+        margin: 18px 0;
+    }
+}
+body > section:first-of-type {
+    background: linear-gradient(135deg, #FFFCF7, #F3E7D8);
+}
